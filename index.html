@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+
+    <link rel ="stylesheet" href = "style.css">
+</head>
+
+<body id = "XD" onload="main()">
+    <div id = "piezas">
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+        <div id = "opciones">
+            <div id = "imagenes">
+                <div class = "fila">
+                    <button id = "imagen1_seleccionada">
+                        Imagen 1
+                        <img src =  "img/img_ejemplo.png" width="80" height="50" >
+                    </button> 
+                    <button id = "imagen2_seleccionada">
+                        Imagen 2
+                        <img src =  "img/gatito.jpg" width="80" height="50" >
+                    </button> 
+                    <button id = "imagen3_seleccionada">
+                        Imagen 3
+                        <img src =  "img/gatito1.jpg" width="80" height="50" >
+                    </button> 
+                </div>
+                <div class = "fila">
+                    <button id = "imagen4_seleccionada">
+                        Imagen 4
+                        <img src =  "img/gatito2.jpg" width="80" height="50" >
+                    </button> 
+                    <button id = "imagen5_seleccionada">
+                        Imagen 5
+                        <img src =  "img/gatito3.jpg" width="80" height="50" >
+                    </button> 
+                    <button id = "imagen6_seleccionada">
+                        Imagen 6
+                        <img src =  "img/gatito4.jpg" width="80" height="50" >
+                    </button> 
+                </div>
+            </div>
+            <div id = "playButtons">
+                <button id="suffle">Revolver</button> 
+                <button id="getSolutionBacktracking">Mostrar solucion con Backtracking</button>
+                <button id="getSolutionA*">Mostrar solucion con A*</button>
+                <button id="solve">Resolver</button>
+                <div id = "tamañoDiv">
+                    <label>Tamaño</label>
+                    <input id = "tamaño" type = "number" max = 20 min = 3>
+                    <button id="generate">Generar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <textarea id = "textareaSolution" rows="50" cols="25"></textarea>
+    </div>
+    <div class = "overlay" id = "overlayNoSolucion">
+        <div class = "overlayBox" id = "">
+            <h1>¡Caracoles! Parece que esta matriz no tiene solucion</h1>
+            <button id = "reiniciar">Reiniciar</button>
+            <button id = "continuar1">¡Quiero intentarlo de todos modos!</button>
+        </div>
+    </div>
+    <div class = "overlay" id = "overlayNoSearchSolucion">
+        <div class = "overlayBox" id = "">
+            <h1>¡Rayos! Parece que aun no le has buscado una solucion a esta matriz</h1>
+            <h1>Para buscar una solucion primero presiona alguno de los botones</h1>
+            <h1>"Buscar solucion por Backtracking" o "Buscar solucion por A*"</h1>
+            <button id = "continuar2">Continuar</button>
+        </div>
+    </div>
+
+    <img id = "imagen1" src =  "img/img_ejemplo.png" style = display:none>
+    <img id = "imagen2" src =  "img/gatito.jpg" style = display:none >
+    <img id = "imagen3" src =  "img/gatito1.jpg" style = display:none >
+    <img id = "imagen4" src =  "img/gatito2.jpg" style = display:none >
+    <img id = "imagen5" src =  "img/gatito3.jpg" style = display:none >
+    <img id = "imagen6" src =  "img/gatito4.jpg" style = display:none >
+    <script src="app.js"></script>
+</body>
+</html>
